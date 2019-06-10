@@ -4,9 +4,7 @@ Configuration and utilities for [Homebrew](https://brew.sh) in the
 <a href="https://fishshell.com" title="friendly interactive shell">fish
 shell</a>.
 
-Most have been ported over from my zsh dotfiles.
-
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/halostatue/fish-brew.svg)](https://github.com/halostatue/fish-utils/releases)
+[![Versin](https://img.shields.io/github/tag/halostatue/fish-brew.svg?label=Version)](https://github.com/halostatue/fish-utils/releases)
 
 ## Installation
 
