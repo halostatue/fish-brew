@@ -10,7 +10,7 @@ if command -sq brew
     functions -q path:unique
     and begin
         path:unique --append $brew_paths
-        path:unique --man --append {$prefix}/share/man
+        path:unique --man --append {$__brew_prefix}/share/man
     end
 end
 
