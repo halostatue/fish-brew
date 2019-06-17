@@ -1,14 +1,12 @@
 # halostatue/fish-brew
 
-Configuration and utilities for [Homebrew](https://brew.sh) in the
-<a href="https://fishshell.com" title="friendly interactive shell">fish
-shell</a>.
+Configuration and utilities for [Homebrew][] in the [fish shell][].
 
-[![Versin](https://img.shields.io/github/tag/halostatue/fish-brew.svg?label=Version)](https://github.com/halostatue/fish-utils/releases)
+[![Version][]][]
 
 ## Installation
 
-Install with [Fisher](https://github.com/jorgebucaran/fisher) (recommended):
+Install with [Fisher][] (recommended):
 
 ```fish
 fisher add halostatue/fish-brew
@@ -25,13 +23,13 @@ directory preserving the directory structure.
 
 ### System Requirements
 
-- [fish](https://github.com/fish-shell/fish-shell) 3.0+
+- [fish][] 3.0+
+- [Homebrew][] (Linuxbrew _may_ work, but has not been tested)
 
 ## Startup Configuration (conf.d)
 
 Adds Homebrew paths to the Fish shell paths. This uses `path:unique` from
-[halostatue/fish-utils](https://github.com/halostatue/fish-utils) to manage
-`$PATH` and `$MANPATH`.
+[halostatue/fish-utils][] to manage `$PATH` and `$MANPATH`.
 
 If Homebrew is installed into `~/.brew` (my preferred installation location
 for Homebrew), this will be detected.
@@ -61,8 +59,17 @@ Returns true if the named keg is installed.
 with:keg:openssl make
 ```
 
-Since the OpenSSL keg is not linked and some
+As the OpenSSL keg is not linked and some applications require it, this
+function execute the command with the OpenSSL paths set usefully.
 
 ## License
 
 [MIT](LICENCE.md)
+
+[Homebrew]: https://brew.sh
+[fish shell]: https://fishshell.com "friendly interactive shell"
+[Version]: https://img.shields.io/github/tag/halostatue/fish-brew.svg?label=Version
+[![Version][]]: https://github.com/halostatue/fish-brew/releases
+[Fisher]: https://github.com/jorgebucaran/fisher
+[fish]: https://github.com/fish-shell/fish-shell
+[halostatue/fish-utils]: https://github.com/halostatue/fish-utils

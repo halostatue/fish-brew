@@ -1,18 +1,23 @@
 test -x ~/.brew/bin/brew
 and set PATH ~/.brew/bin $PATH
 
-if command -sq brew
-    set -Uq __brew_prefix
-    or set -U __brew_prefix (brew --prefix)
+command -sq brew
+or exit
 
+set -Uq __brew_prefix
+or set -U __brew_prefix (brew --prefix)
+
+if not contains {$__brew_prefix}/bin $PATH
+    or not contains {$__brew_prefix}/sbin $PATH
     set -l brew_paths {$__brew_prefix}/bin /usr/bin /bin {$__brew_prefix}/sbin /usr/sbin /sbin
 
     functions -q path:unique
-    and begin
-        path:unique --append $brew_paths
-        path:unique --man --append {$__brew_prefix}/share/man
-    end
+    and path:unique --append $brew_paths
 end
+
+not contains {$__brew_prefix}/share/man $MANPATH
+and functions -q path:unique
+and path:unique --man --append {$__brew_prefix}/share/man
 
 function _halostatue_fish_brew_uninstall -e halostatue_fish_brew_uninstall
     set -Uq __brew_prefix
@@ -26,5 +31,5 @@ function _halostatue_fish_brew_uninstall -e halostatue_fish_brew_uninstall
 
     set -Ue __brew_prefix
 
-    functions -e (functions -a | command awk '/^__with:keg:openssl/')
+    functions -e (functions -a | command awk '/^__with:keg:openssl/') (status function)
 end
