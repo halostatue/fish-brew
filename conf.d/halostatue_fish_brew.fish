@@ -15,10 +15,6 @@ if not contains {$__brew_prefix}/bin $PATH
     and path:unique --append $brew_paths
 end
 
-not contains {$__brew_prefix}/share/man $MANPATH
-and functions -q path:unique
-and path:unique --man --append {$__brew_prefix}/share/man
-
 function _halostatue_fish_brew_uninstall -e halostatue_fish_brew_uninstall
     set -Uq __brew_prefix
     or return

@@ -29,7 +29,19 @@ directory preserving the directory structure.
 ## Startup Configuration (conf.d)
 
 Adds Homebrew paths to the Fish shell paths. This uses `path:unique` from
-[halostatue/fish-utils][] to manage `$PATH` and `$MANPATH`.
+[halostatue/fish-utils][] to manage `$PATH`. We do not use `$fish_user_paths`
+for this because the correct order for Homebrew paths is:
+
+- `(brew --prefix)/bin`
+- `/usr/bin`
+- `/bin`
+- `(brew --prefix)/sbin`
+- `/usr/sbin`
+- `/sbin`
+
+If `(brew --prefix)/bin` and `(brew --prefix)/sbin` are placed in
+`$fish_user_paths`, then `(brew --prefix)/sbin` would end up being placed
+_before_ `/usr/bin`, which might result in odd behaviours.
 
 If Homebrew is installed into `~/.brew` (my preferred installation location
 for Homebrew), this will be detected.
