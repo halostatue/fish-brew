@@ -27,5 +27,6 @@ function _halostatue_fish_brew_uninstall -e halostatue_fish_brew_uninstall
 
     set -Ue __brew_prefix
 
-    functions -e (functions -a | command awk '/^__with:keg:openssl/') (status function)
+    functions -e brew-prefix has:keg with:keg:openssl \
+        (functions -a | command awk '/^__with:keg:openssl/') (status function)
 end

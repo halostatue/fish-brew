@@ -1,5 +1,11 @@
 # fish-brew Changelog
 
+## 1.2
+
+* Add a `fishfile` dependency on `laughedelic/brew-completions`; there is no
+  circumstance that I can forsee where one would want these brew functions
+  without the requisite completions.
+
 ## 1.1
 
 * Stop handling `$MANPATH`.
