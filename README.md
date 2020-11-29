@@ -9,7 +9,11 @@ Configuration and utilities for [Homebrew][] in the [fish shell][].
 Install with [Fisher][] (recommended):
 
 ```fish
+# Fisher 3.x
 fisher add halostatue/fish-brew
+
+# Fisher 4.0+: Install dependencies explicitly
+fisher install halostatue/fish-utils-core@1.x laughedelic/brew-completions halostatue/fish-brew
 ```
 
 <details>
