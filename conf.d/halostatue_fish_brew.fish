@@ -11,8 +11,7 @@ if not contains {$__brew_prefix}/bin $PATH
     or not contains {$__brew_prefix}/sbin $PATH
     set -l brew_paths {$__brew_prefix}/bin /usr/bin /bin {$__brew_prefix}/sbin /usr/sbin /sbin
 
-    functions -q path:unique
-    and path:unique --append $brew_paths
+    fish_add_path -amP $brew_paths
 end
 
 function _halostatue_fish_brew_uninstall -e halostatue_fish_brew_uninstall
@@ -27,6 +26,5 @@ function _halostatue_fish_brew_uninstall -e halostatue_fish_brew_uninstall
 
     set -Ue __brew_prefix
 
-    functions -e brew-prefix has:keg with:keg:openssl \
-        (functions -a | command awk '/^__with:keg:openssl/') (status function)
+    functions -e has:keg (status function)
 end

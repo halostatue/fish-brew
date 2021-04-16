@@ -1,5 +1,18 @@
 # fish-brew Changelog
 
+## 2.0
+
+- Remove `fishfile` and fisher 3 instructions. Installation with fisher
+  3 still works, but is unsupported.
+
+- Switch from `path:unique --append` to the provided function `fish_add_path`.
+  This change requires at least Fish 3.2, but no longer requires
+  `halostatue/fish-utils-core`. If you are on an older version of Fish, stay
+  with the 1.x releases.
+
+- Remove `brew-prefix` function and `__with:keg:openssl`. I haven’t used these
+  since I ported them from my zsh profiles.
+
 ## 1.3
 
 - Update the `fishfile` dependency on `halostatue/fish-utils` to
