@@ -1,30 +1,27 @@
-test -x ~/.brew/bin/brew
-and set PATH ~/.brew/bin $PATH
+# Find Homebrew via a known prefix. If the `__homebrew_prefix` universal
+# variable is set, that will be set as the first test prefix.
 
-command -sq brew
-or exit
+if not command -sq brew
+    set -l prefixes $HOME/.brew /opt/homebrew /usr/local
+    set -qU __homebrew_prefix; and set -p prefixes $__homebrew_prefix
 
-set -Uq __brew_prefix
-or set -U __brew_prefix (brew --prefix)
+    for prefix in $prefixes
+        test -x $prefix/bin/brew; or continue
 
-if not contains {$__brew_prefix}/bin $PATH
-    or not contains {$__brew_prefix}/sbin $PATH
-    set -l brew_paths {$__brew_prefix}/bin /usr/bin /bin {$__brew_prefix}/sbin /usr/sbin /sbin
-
-    fish_add_path -amP $brew_paths
+        set -p PATH $prefix/bin
+        break
+    end
 end
 
+command -sq brew; or exit
+
+set -Uq __brew_prefix; or set -U __brew_prefix (brew --prefix)
+
+fish_add_path -amP {$__brew_prefix}/bin /usr/local/bin /usr/bin /bin \
+    {$__brew_prefix}/sbin /usr/local/sbin /usr/sbin /sbin
+
 function _halostatue_fish_brew_uninstall -e halostatue_fish_brew_uninstall
-    set -Uq __brew_prefix
-    or return
-
-    set -l i (contains -i {$__brew_prefix}/bin $fish_user_paths)
-    and set -e fish_user_paths[$i]
-
-    set -l i (contains -i {$__brew_prefix}/sbin $fish_user_paths)
-    and set -e fish_user_paths[$i]
-
+    set -Uq __brew_prefix; or return
     set -Ue __brew_prefix
-
     functions -e has:keg (status function)
 end

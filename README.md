@@ -17,6 +17,7 @@ fisher install halostatue/fish-brew
 
 Copy `functions/*.fish` and `conf.d/*.fish` to your fish configuration
 directory preserving the directory structure.
+
 </details>
 
 ### System Requirements
@@ -31,9 +32,11 @@ with Fish 3.2. This is not set in `$fish_user_paths` because the correct order
 for Homebrew paths is:
 
 - `(brew --prefix)/bin`
+- `/usr/local/bin`
 - `/usr/bin`
 - `/bin`
 - `(brew --prefix)/sbin`
+- `/usr/local/sbin`
 - `/usr/sbin`
 - `/sbin`
 
@@ -57,7 +60,7 @@ Returns true if the named keg is installed.
 
 [MIT](LICENCE.md)
 
-[Homebrew]: https://brew.sh
-[fish shell]: https://fishshell.com "friendly interactive shell"
-[Fisher]: https://github.com/jorgebucaran/fisher
+[homebrew]: https://brew.sh
+[fish shell]: https://fishshell.com 'friendly interactive shell'
+[fisher]: https://github.com/jorgebucaran/fisher
 [fish]: https://github.com/fish-shell/fish-shell
