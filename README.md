@@ -56,7 +56,7 @@ has:keg openssl
 
 Returns true if the named keg is installed.
 
-## License
+## Licence
 
 [MIT](LICENCE.md)
 
