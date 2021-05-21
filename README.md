@@ -46,6 +46,11 @@ _before_ `/usr/bin`, which might result in odd behaviours.
 
 If Homebrew is installed into `~/.brew`, this will be detected.
 
+If `$HOME/.config/brew/config.fish` exists, it will be sourced during
+initialization. This allows the loading of configuration values like
+`$HOMEBREW_GITHUB_API_TOKEN`. See the `brew` discussion on [Environment] for
+more details.
+
 ## Functions
 
 ### has:keg
@@ -64,3 +69,4 @@ Returns true if the named keg is installed.
 [fish shell]: https://fishshell.com 'friendly interactive shell'
 [fisher]: https://github.com/jorgebucaran/fisher
 [fish]: https://github.com/fish-shell/fish-shell
+[environment]: https://docs.brew.sh/Manpage#environment

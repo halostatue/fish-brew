@@ -17,6 +17,8 @@ command -sq brew; or exit
 
 set -Uq __brew_prefix; or set -U __brew_prefix (brew --prefix)
 
+test -s $HOME/.brew_config.fish; and source $HOME/.brew_config.fish
+
 fish_add_path -amP {$__brew_prefix}/bin /usr/local/bin /usr/bin /bin \
     {$__brew_prefix}/sbin /usr/local/sbin /usr/sbin /sbin
 

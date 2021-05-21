@@ -1,5 +1,12 @@
 # fish-brew Changelog
 
+## 2.1.0 / 2021-05-21
+
+- If `$HOME/.config/brew/config.fish` exists, it will be sourced during
+  initialization. This allows the loading of configuration values like
+  `$HOMEBREW_GITHUB_API_TOKEN`. See the `brew` discussion on [Environment] for
+  more details.
+
 ## 2.0.1 / 2021-04-17
 
 - Fix a homebrew detection problem for native Apple Silicon hombrew. This now
@@ -65,3 +72,5 @@
 ## 1.0 / 2019-06-06
 
 - Initial version
+
+[environment]: https://docs.brew.sh/Manpage#environment
