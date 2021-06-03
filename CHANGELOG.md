@@ -1,5 +1,10 @@
 # fish-brew Changelog
 
+## 2.1.1 / 2021-06-03
+
+- Fix a bug in `has:keg` so that if `brew` is not in `$PATH` it will return
+  false, not an error.
+
 ## 2.1.0 / 2021-05-21
 
 - If `$HOME/.config/brew/config.fish` exists, it will be sourced during
@@ -9,7 +14,7 @@
 
 ## 2.0.1 / 2021-04-17
 
-- Fix a homebrew detection problem for native Apple Silicon hombrew. This now
+- Fix a homebrew detection problem for native Apple Silicon homebrew. This now
   looks for `$HOME/.brew`, `/opt/homebrew`, then `/usr/local`. If a universal
   variable `$__homebrew_prefix` is set, that will be looked at before
   `$HOME/.brew`.
