@@ -1,5 +1,9 @@
 # fish-brew Changelog
 
+## 2.1.2 / 2021-06-17
+
+- Fix a bug in custom brew configuration loading.
+
 ## 2.1.1 / 2021-06-03
 
 - Fix a bug in `has:keg` so that if `brew` is not in `$PATH` it will return
