@@ -1,5 +1,7 @@
 # halostatue/fish-brew
 
+[![Version][]](https://github.com/halostatue/fish-brew/releases)
+
 Configuration and utilities for [Homebrew][] in the [fish shell][].
 
 ## Installation
@@ -66,6 +68,7 @@ Returns true if the named keg is installed.
 [MIT](LICENCE.md)
 
 [homebrew]: https://brew.sh
+[version]: https://img.shields.io/github/tag/halostatue/fish-brew.svg?label=Version
 [fish shell]: https://fishshell.com 'friendly interactive shell'
 [fisher]: https://github.com/jorgebucaran/fisher
 [fish]: https://github.com/fish-shell/fish-shell
