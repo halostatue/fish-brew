@@ -1,6 +1,9 @@
-function has:keg -a keg
-    command -sq brew; or return 1
+function has:keg -a keg -d 'Return true if the provided keg exists'
+    command -sq brew
+    or return 1
 
-    set -l cellars (find (brew --prefix)/Cellar/$argv[1] -type d -depth 1)
-    test (count $cellars) -ne 0
+    test -z $keg
+    and return 1
+
+    test -d (brew --prefix)/Cellar/$keg
 end

@@ -9,7 +9,7 @@ Configuration and utilities for [Homebrew][] in the [fish shell][].
 Install with [Fisher][] (recommended):
 
 ```fish
-fisher install halostatue/fish-brew
+fisher install halostatue/fish-brew@2.x
 ```
 
 <details>
@@ -50,7 +50,7 @@ If Homebrew is installed into `~/.brew`, this will be detected.
 
 If `$HOME/.config/brew/config.fish` exists, it will be sourced during
 initialization. This allows the loading of configuration values like
-`$HOMEBREW_GITHUB_API_TOKEN`. See the `brew` discussion on [Environment] for
+`$HOMEBREW_GITHUB_API_TOKEN`. See the `brew` discussion on [Environment][] for
 more details.
 
 ## Functions
@@ -63,13 +63,31 @@ has:keg openssl
 
 Returns true if the named keg is installed.
 
+### has:cask
+
+```fish
+has:cask macvim
+```
+
+Returns true if the named cask is installed.
+
 ## Licence
 
-[MIT](LICENCE.md)
+[MIT](./LICENCE.md)
+
+## Change Log
+
+[CHANGELOG](./CHANGELOG.md)
+
+## Contributing
+
+- [Contributing](./CONTRIBUTING.md)
+- [Contributors](./CONTRIBUTORS.md)
+- [Code of Conduct](./CODE_OF_CONDUCT.md)
 
 [homebrew]: https://brew.sh
-[version]: https://img.shields.io/github/tag/halostatue/fish-brew.svg?label=Version
 [fish shell]: https://fishshell.com 'friendly interactive shell'
+[version]: https://img.shields.io/github/tag/halostatue/fish-brew.svg?label=Version
 [fisher]: https://github.com/jorgebucaran/fisher
 [fish]: https://github.com/fish-shell/fish-shell
 [environment]: https://docs.brew.sh/Manpage#environment

@@ -1,5 +1,12 @@
 # fish-brew Changelog
 
+## 2.2.0 / 2022-04-04
+
+- Reformat scripts
+- Add `has:cask` function.
+- Simplified the implementation of `has:keg`. It now requires its parameter or
+  will return false.
+
 ## 2.1.2 / 2021-06-17
 
 - Fix a bug in custom brew configuration loading.
@@ -13,7 +20,7 @@
 
 - If `$HOME/.config/brew/config.fish` exists, it will be sourced during
   initialization. This allows the loading of configuration values like
-  `$HOMEBREW_GITHUB_API_TOKEN`. See the `brew` discussion on [Environment] for
+  `$HOMEBREW_GITHUB_API_TOKEN`. See the `brew` discussion on [Environment][] for
   more details.
 
 ## 2.0.1 / 2021-04-17
