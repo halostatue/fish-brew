@@ -1,5 +1,17 @@
 # fish-brew Changelog
 
+## 2.3.0 / 2022-06-24
+
+- Renamed `has:cask` to `has_cask` with an alias so that `has:cask` works as
+  expected. `has:cask` will be removed in the next major version.
+
+- Renamed `has:keg` to `has_keg` with an alias so that `has:keg` works as
+  expected. `has:keg` will be removed in the next major version.
+
+- Extended `has_cask` and `has_keg` functions to support discovery of one or
+  more casks or kegs. The flag `-A` or `--all` may be provided to make these
+  functions strict (all casks or kegs must be present).
+
 ## 2.2.0 / 2022-04-04
 
 - Reformat scripts
