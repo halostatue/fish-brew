@@ -9,7 +9,7 @@ Configuration and utilities for [Homebrew][] in the [fish shell][].
 Install with [Fisher][] (recommended):
 
 ```fish
-fisher install halostatue/fish-brew@2.x
+fisher install halostatue/fish-brew@v2.x
 ```
 
 <details>
