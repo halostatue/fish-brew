@@ -1,5 +1,11 @@
 # fish-brew Changelog
 
+## 2.4.0 / 2023-02-16
+
+- Added `$HOME/.linuxbrew` to supported Homebrew locations for detection.
+
+- Automatically enable `HOMEBREW_NO_GOOGLE_ANALYTICS`, for Homebrew 4.0+.
+
 ## 2.3.0 / 2022-06-24
 
 - Renamed `has:cask` to `has_cask` with an alias so that `has:cask` works as

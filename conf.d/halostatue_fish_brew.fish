@@ -3,7 +3,7 @@
 # Find Homebrew via a known prefix. If the `__homebrew_prefix` universal
 # variable is set, that will be set as the first test prefix.
 if not command --query brew
-    set --local prefixes $HOME/.brew /opt/homebrew /usr/local
+    set --local prefixes $HOME/.brew $HOME/.linuxbrew /opt/homebrew /usr/local
     set --query --universal __homebrew_prefix
     and set --prepend prefixes $__homebrew_prefix
 
@@ -15,6 +15,8 @@ if not command --query brew
         break
     end
 end
+
+set --global --export HOMEBREW_NO_GOOGLE_ANALYTICS 1
 
 command --query brew
 or return
