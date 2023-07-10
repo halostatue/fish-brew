@@ -1,5 +1,12 @@
 # fish-brew Changelog
 
+## 2.5.0 / 2023-07-10
+
+- Remove `HOMEBREW_NO_GOOGLE_ANALYTICS` configuration; the latest version of
+  Homebrew no longer uses Google analytics and uses an instance of InfluxDB in
+  Europe. No decision has been made on whether those analytics should be
+  disabled or not by default.
+
 ## 2.4.0 / 2023-02-16
 
 - Added `$HOME/.linuxbrew` to supported Homebrew locations for detection.

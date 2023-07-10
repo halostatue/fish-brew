@@ -16,8 +16,6 @@ if not command --query brew
     end
 end
 
-set --global --export HOMEBREW_NO_GOOGLE_ANALYTICS 1
-
 command --query brew
 or return
 
