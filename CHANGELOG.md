@@ -1,5 +1,12 @@
 # fish-brew Changelog
 
+## 3.0.0 / 2023-10-22
+
+- Remove `has:cask` and `has:keg` aliases.
+
+- Update to Contributor Covenant Code of Conduct, [version
+  2.1][cccoc21].
+
 ## 2.5.0 / 2023-07-10
 
 - Remove `HOMEBREW_NO_GOOGLE_ANALYTICS` configuration; the latest version of
@@ -115,3 +122,4 @@
 - Initial version
 
 [environment]: https://docs.brew.sh/Manpage#environment
+[cccoc21]: https://www.contributor-covenant.org/version/2/1/code_of_conduct

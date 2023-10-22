@@ -35,13 +35,7 @@ fish_add_path --append --move --path \
     /usr/sbin \
     /sbin
 
-alias has:cask=has_cask
-alias has:keg=has_keg
-
 function _halostatue_fish_brew_uninstall -e halostatue_fish_brew_uninstall
-    set --universal --query __brew_prefix
-    or return
-
     set --universal --erase __brew_prefix
     functions --erase has:cask has:keg (status function)
 end

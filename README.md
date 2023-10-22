@@ -9,18 +9,8 @@ Configuration and utilities for [Homebrew][] in the [fish shell][].
 Install with [Fisher][] (recommended):
 
 ```fish
-fisher install halostatue/fish-brew@2.x
+fisher install halostatue/fish-brew@3.x
 ```
-
-<details>
-<summary>Not using a package manager?</summary>
-
----
-
-Copy `functions/*.fish` and `conf.d/*.fish` to your fish configuration
-directory preserving the directory structure.
-
-</details>
 
 ### System Requirements
 
@@ -55,21 +45,21 @@ more details.
 
 ## Functions
 
-### has:keg
+### has_keg
 
 ```fish
-has:keg openssl
+has_keg openssl
 ```
 
-Returns true if the named keg is installed.
+Returns true if the named keg is installed. Previously known as `has:keg`.
 
-### has:cask
+### has_cask
 
 ```fish
-has:cask macvim
+has_cask macvim
 ```
 
-Returns true if the named cask is installed.
+Returns true if the named cask is installed. Previously known as `has:cask`.
 
 ## Licence
 
