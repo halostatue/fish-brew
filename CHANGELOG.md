@@ -1,11 +1,14 @@
 # fish-brew Changelog
 
+## NEXT / YYYY-MM-DD
+
+- Updated meta configuration.
+
 ## 3.0.0 / 2023-10-22
 
 - Remove `has:cask` and `has:keg` aliases.
 
-- Update to Contributor Covenant Code of Conduct, [version
-  2.1][cccoc21].
+- Update to Contributor Covenant Code of Conduct, [version 2.1][cccoc21].
 
 ## 2.5.0 / 2023-07-10
 
@@ -52,12 +55,12 @@
 
 - If `$HOME/.config/brew/config.fish` exists, it will be sourced during
   initialization. This allows the loading of configuration values like
-  `$HOMEBREW_GITHUB_API_TOKEN`. See the `brew` discussion on [Environment][] for
-  more details.
+  `$HOMEBREW_GITHUB_API_TOKEN`. See the `brew` discussion on
+  [Environment][Environment] for more details.
 
 ## 2.0.1 / 2021-04-17
 
-- Fix a homebrew detection problem for native Apple Silicon homebrew. This now
+- Fix a Homebrew detection problem for native Apple Silicon Homebrew. This now
   looks for `$HOME/.brew`, `/opt/homebrew`, then `/usr/local`. If a universal
   variable `$__homebrew_prefix` is set, that will be looked at before
   `$HOME/.brew`.
@@ -69,8 +72,8 @@
 
 ## 2.0 / 2021-04-15
 
-- Remove `fishfile` and fisher 3 instructions. Installation with fisher
-  3 still works, but is unsupported.
+- Remove `fishfile` and fisher 3 instructions. Installation with fisher 3 still
+  works, but is unsupported.
 
 - Switch from `path:unique --append` to the provided function `fish_add_path`.
   This change requires at least Fish 3.2, but no longer requires
@@ -88,7 +91,7 @@
 ## 1.2 / 2019-12-30
 
 - Add a `fishfile` dependency on `laughedelic/brew-completions`; there is no
-  circumstance that I can forsee where one would want these brew functions
+  circumstance that I can foresee where one would want these brew functions
   without the requisite completions.
 
 ## 1.1 / 2019-06-27
