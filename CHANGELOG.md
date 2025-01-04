@@ -1,8 +1,16 @@
 # fish-brew Changelog
 
-## NEXT / YYYY-MM-DD
+## 3.1.0 / 2025-01-04
 
 - Updated meta configuration.
+
+- Deprecate sourcing `~/.config/brew/config.fish`. Homebrew offers a better
+  configuration file (`$XDG_CONFIG_HOME/homebrew/brew.env` or
+  `$HOME/.homebrew/brew.env`). A warning will be printed every ten interactive
+  sessions _if_ `~/.config/brew/config.fish` exists.
+
+- Modified fish path reordering so that it only occurs _if_ `$brew_prefix/bin`
+  is not present in `$fish_user_paths`.
 
 ## 3.0.0 / 2023-10-22
 
