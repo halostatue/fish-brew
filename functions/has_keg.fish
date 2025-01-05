@@ -1,15 +1,13 @@
-# @halostatue/fish-brew/functions/has_keg.fish
-function has_keg -d 'Test if the named keg or kegs are installed'
+# @halostatue/fish-brew/functions/has_keg.fish:v3.2.0
+
+function has_keg --description 'Test if the named keg or kegs are installed'
     command --query brew
     or return 1
 
-    argparse A/all -- $argv
+    argparse --min-args 1 A/all -- $argv
     or return 1
 
-    set --query argv[1]
-    or return 1
-
-    set --local found 0
+    set --function found 0
 
     for keg in $argv
         if test -d (brew --prefix)/Cellar/$keg

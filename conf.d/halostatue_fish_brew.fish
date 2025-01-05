@@ -1,4 +1,4 @@
-# @halostatue/fish-brew/conf.d/halostatue_fish_brew.fish
+# @halostatue/fish-brew/conf.d/halostatue_fish_brew.fish:v3.2.0
 
 # Find Homebrew via a known prefix. If the `__homebrew_prefix` universal
 # variable is set, that will be set as the first test prefix.
@@ -20,7 +20,21 @@ command --query brew
 or return 0
 
 set --query --universal __brew_prefix
-or set --universal __brew_prefix (brew --prefix)
+and set --erase --universal __brew_prefix
+
+set --local __brew_prefix (brew --prefix)
+
+if ! contains -- {$__brew_prefix}/bin $fish_user_paths
+    fish_add_path --append --move --path \
+        {$__brew_prefix}/bin \
+        /usr/local/bin \
+        /usr/bin \
+        /bin \
+        {$__brew_prefix}/sbin \
+        /usr/local/sbin \
+        /usr/sbin \
+        /sbin
+end
 
 if test -s $HOME/.config/brew/config.fish
     if status is-interactive
@@ -43,19 +57,7 @@ if test -s $HOME/.config/brew/config.fish
     source $HOME/.config/brew/config.fish
 end
 
-if ! contains -- {$__brew_prefix}/bin $fish_user_paths
-    fish_add_path --append --move --path \
-        {$__brew_prefix}/bin \
-        /usr/local/bin \
-        /usr/bin \
-        /bin \
-        {$__brew_prefix}/sbin \
-        /usr/local/sbin \
-        /usr/sbin \
-        /sbin
-end
-
 function _halostatue_fish_brew_uninstall -e halostatue_fish_brew_uninstall
-    set --universal --erase __brew_prefix
+    set --universal --erase __brew_prefix __halostatue_fish_brew_config_deprecated
     functions --erase has_cask has_keg (status function)
 end

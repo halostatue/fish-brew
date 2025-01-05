@@ -1,5 +1,14 @@
 # fish-brew Changelog
 
+## 3.2.0 / 2025-01-04
+
+- Added version information to comment tags.
+- Switched to long flags where possible.
+- Switched to `set --function` instead of `set --local`.
+- Moved path configuration _before_ sourcing `$HOME/.config/brew/config.fish`.
+- Updated documentation.
+- Added tooling to the Justfile for easier release management.
+
 ## 3.1.0 / 2025-01-04
 
 - Updated meta configuration.

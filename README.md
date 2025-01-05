@@ -1,27 +1,40 @@
 # halostatue/fish-brew
 
-[![Version][]](https://github.com/halostatue/fish-brew/releases)
+[![Version][version]](https://github.com/halostatue/fish-brew/releases)
 
-Configuration and utilities for [Homebrew][] in the [fish shell][].
+Configuration and utility functions for [Homebrew][homebrew] in the
+[fish shell][shell].
 
 ## Installation
 
-Install with [Fisher][] (recommended):
+Install with [Fisher][fisher]:
 
 ```fish
-fisher install halostatue/fish-brew@v3.x
+fisher install halostatue/fish-brew@v3
 ```
 
 ### System Requirements
 
-- [fish][] 3.2+
-- [Homebrew][]
+- [fish][fish] 3.4+
+- [Homebrew][homebrew]
 
-## Startup Configuration (conf.d)
+## Startup Configuration (`conf.d`)
 
-Adds Homebrew paths to `$PATH`. This uses the `fish_add_path` function included
-with Fish 3.2. This is not set in `$fish_user_paths` because the correct order
-for Homebrew paths is:
+The configuration file for fish-brew will detect the presence of the `brew`
+executable and place the Homebrew binary paths in `$PATH`.
+
+> The `brew` paths will be resolved from `$HOME/.brew`, `$HOME/.linuxbrew`,
+> `/opt/homebrew`, or `/usr/local`. An additional path can be searched by
+> setting the universal variable `$__homebrew_prefix`.
+
+### `$PATH` Configuration
+
+If `(brew --prefix)/bin` is found in `$fish_user_paths`, `$PATH` configuration
+will be skipped. Note that putting `(brew --prefix)/{,s}bin` in
+`$fish_user_paths` is not recommended, as `(brew --prefix)/sbin` may be placed
+before `/usr/bin`, potentially resulting in odd behaviours.
+
+The correct ordering of Homebrew paths with default paths is:
 
 - `(brew --prefix)/bin`
 - `/usr/local/bin`
@@ -32,34 +45,40 @@ for Homebrew paths is:
 - `/usr/sbin`
 - `/sbin`
 
-If `(brew --prefix)/bin` and `(brew --prefix)/sbin` are placed in
-`$fish_user_paths`, then `(brew --prefix)/sbin` would end up being placed
-_before_ `/usr/bin`, which might result in odd behaviours.
+> If using MacPorts, I recommend using [halostatue/fish-macports][macports] in
+> addition to fish-brew to ensure that Homebrew and MacPorts paths are placed in
+> the correct order.
 
-If Homebrew is installed into `~/.brew`, this will be detected.
+### Homebrew Configuration
+
+> This feature is deprecated and will be removed in fish-brew@v4. It is
+> recommended that the local Homebrew environment files be used instead, as
+> described in [Environment][env].
+>
+> A deprecation warning will be printed every ten interactive sessions if
+> `$HOME/.config/brew/config.fish`.
 
 If `$HOME/.config/brew/config.fish` exists, it will be sourced during
 initialization. This allows the loading of configuration values like
-`$HOMEBREW_GITHUB_API_TOKEN`. See the `brew` discussion on [Environment][] for
-more details.
+`$HOMEBREW_GITHUB_API_TOKEN`.
 
 ## Functions
 
-### has_keg
+### `has_keg`
 
 ```fish
 has_keg openssl
 ```
 
-Returns true if the named keg is installed. Previously known as `has:keg`.
+Returns true if the named keg is installed.
 
-### has_cask
+### `has_cask`
 
 ```fish
 has_cask macvim
 ```
 
-Returns true if the named cask is installed. Previously known as `has:cask`.
+Returns true if the named cask is installed.
 
 ## Licence
 
@@ -75,9 +94,10 @@ Returns true if the named cask is installed. Previously known as `has:cask`.
 - [Contributors](./CONTRIBUTORS.md)
 - [Code of Conduct](./CODE_OF_CONDUCT.md)
 
-[homebrew]: https://brew.sh
-[fish shell]: https://fishshell.com 'friendly interactive shell'
-[version]: https://img.shields.io/github/tag/halostatue/fish-brew.svg?label=Version
-[fisher]: https://github.com/jorgebucaran/fisher
+[env]: https://docs.brew.sh/Manpage#environment
 [fish]: https://github.com/fish-shell/fish-shell
-[environment]: https://docs.brew.sh/Manpage#environment
+[fisher]: https://github.com/jorgebucaran/fisher
+[homebrew]: https://brew.sh
+[macports]: https://github.com/halostatue/fish-macports
+[shell]: https://fishshell.com 'friendly interactive shell'
+[version]: https://img.shields.io/github/tag/halostatue/fish-brew.svg?label=Version
