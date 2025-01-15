@@ -1,4 +1,4 @@
-# @halostatue/fish-brew/functions/has_keg.fish:v3.2.0
+# @halostatue/fish-brew/functions/has_keg.fish:v3.2.1
 
 function has_keg --description 'Test if the named keg or kegs are installed'
     command --query brew

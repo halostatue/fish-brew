@@ -1,5 +1,10 @@
 # fish-brew Changelog
 
+## 3.2.1 / 2025-01-15
+
+- Changed `conf.d/halostatue_fish_brew.fish` to no longer exit early if Homebrew
+  does not exist; the uninstall function should be created in all cases.
+
 ## 3.2.0 / 2025-01-04
 
 - Added version information to comment tags.
