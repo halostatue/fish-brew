@@ -1,5 +1,10 @@
 # fish-brew Changelog
 
+## NEXT / YYYY-MM-DD
+
+- Updated tests and added workflow security checking.
+- Added FUNDING.
+
 ## 3.2.1 / 2025-01-15
 
 - Changed `conf.d/halostatue_fish_brew.fish` to no longer exit early if Homebrew
