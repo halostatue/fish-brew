@@ -11,6 +11,5 @@ permissions: {}
 jobs:
   check-fish:
     uses: halostatue/halostatue/.github/workflows/fish-tests.yml@bff7f39eab9abb98033c9968e9ecfbf6057a17f8 # v1.0.0
-    secrets: inherit
     permissions:
       contents: read

@@ -10,7 +10,6 @@ permissions: {}
 jobs:
   zizmor:
     uses: halostatue/halostatue/.github/workflows/zizmor.yml@bff7f39eab9abb98033c9968e9ecfbf6057a17f8 # v1.0.0
-    secrets: inherit
     permissions:
       security-events: write
       contents: read
