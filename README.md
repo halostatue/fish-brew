@@ -1,6 +1,6 @@
 # halostatue/fish-brew
 
-[![Version][version]](https://github.com/halostatue/fish-brew/releases)
+[![Version][version]][releases]
 
 Configuration and utility functions for [Homebrew][homebrew] in the
 [fish shell][shell].
@@ -101,3 +101,4 @@ Returns true if the named cask is installed.
 [macports]: https://github.com/halostatue/fish-macports
 [shell]: https://fishshell.com 'friendly interactive shell'
 [version]: https://img.shields.io/github/tag/halostatue/fish-brew.svg?label=Version
+[releases]: https://github.com/halostatue/fish-brew/releases
