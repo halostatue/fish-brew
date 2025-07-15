@@ -9,7 +9,7 @@ permissions: {}
 
 jobs:
   zizmor:
-    uses: halostatue/halostatue/.github/workflows/zizmor.yml@2e1187207c35d23f064bce4592d87c2c7ca7e334 # v1.0.2
+    uses: halostatue/halostatue/.github/workflows/zizmor.yml@411de20fbd855c17e77a371fd3e1074247a25c48 # v1.0.4
     permissions:
       security-events: write
       contents: read
