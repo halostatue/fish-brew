@@ -7,9 +7,13 @@ on:
 
 permissions: {}
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   zizmor:
-    uses: halostatue/halostatue/.github/workflows/zizmor.yml@2e1187207c35d23f064bce4592d87c2c7ca7e334 # v1.0.2
+    uses: halostatue/halostatue/.github/workflows/zizmor.yml@6cc8904b869c62229f9338c4fd75beeda12174ae # v1.1.0
     permissions:
       security-events: write
       contents: read
