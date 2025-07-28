@@ -10,6 +10,6 @@ permissions: {}
 
 jobs:
   check-fish:
-    uses: halostatue/halostatue/.github/workflows/fish-tests.yml@6cc8904b869c62229f9338c4fd75beeda12174ae # v1.1.0
+    uses: halostatue/halostatue/.github/workflows/fish-tests.yml@9c8df49525f694b9c5b23057c40d4d5c7f455178 # v1.1.1
     permissions:
       contents: read
