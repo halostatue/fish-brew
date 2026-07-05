@@ -1,10 +1,11 @@
 # Licence
 
-- SPDX-License-Identifier: [MIT][mit]
+<!-- SPDX-License-Identifier: MIT -->
 
-Copyright © 2020-2025 Austin Ziegler
+`halostatue/fish-brew` is copyright © 2020-2026 Austin Ziegler and is licensed
+under the MIT license.
 
-The software in this repository is made available under the MIT license.
+- SPDX License Description: [MIT][mit]
 
 ## MIT License
 

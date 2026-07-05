@@ -1,9 +1,9 @@
 # fish-brew Changelog
 
-## NEXT / YYYY-MM-DD
+## 4.0.0 / 2026-07-05
 
-- Updated tests and added workflow security checking.
-- Added FUNDING.
+- Removed support for `$HOME/.config/brew/config.fish` reading. Use Homebrew
+  [Environment][env] configuration instead.
 
 ## 3.2.1 / 2025-01-15
 
@@ -82,8 +82,8 @@
 
 - If `$HOME/.config/brew/config.fish` exists, it will be sourced during
   initialization. This allows the loading of configuration values like
-  `$HOMEBREW_GITHUB_API_TOKEN`. See the `brew` discussion on
-  [Environment][Environment] for more details.
+  `$HOMEBREW_GITHUB_API_TOKEN`. See the `brew` discussion on [Environment][env]
+  for more details.
 
 ## 2.0.1 / 2021-04-17
 
@@ -151,5 +151,5 @@
 
 - Initial version
 
-[environment]: https://docs.brew.sh/Manpage#environment
 [cccoc21]: https://www.contributor-covenant.org/version/2/1/code_of_conduct
+[env]: https://docs.brew.sh/Manpage#environment
