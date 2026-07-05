@@ -33,27 +33,6 @@ if command --query brew
             /usr/sbin \
             /sbin
     end
-
-    if test -s $HOME/.config/brew/config.fish
-        if status is-interactive
-            set --local deprecated 0
-
-            if set --query $__halostatue_fish_brew_config_deprecated
-                set deprecated $__halostatue_fish_brew_config_deprecated
-            end
-
-            if test $deprecated -le 0
-                echo >&2 "Sourcing ~/.config/brew/config.fish is deprecated."
-                echo >&2 "See https://docs.brew.sh/Manpage#environment for a better alternative."
-
-                set --universal $__halostatue_fish_brew_config_deprecated 10
-            else
-                set --universal $__halostatue_fish_brew_config_deprecated (math $deprecated - 1)
-            end
-        end
-
-        source $HOME/.config/brew/config.fish
-    end
 end
 
 function _halostatue_fish_brew_uninstall -e halostatue_fish_brew_uninstall
