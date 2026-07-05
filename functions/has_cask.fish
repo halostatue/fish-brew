@@ -1,4 +1,4 @@
-# @halostatue/fish-brew/functions/has_cask.fish:v3.2.1
+# @halostatue/fish-brew/functions/has_cask.fish:v4.0.0
 
 function has_cask --description 'Test if the named cask or casks are installed'
     command --query brew

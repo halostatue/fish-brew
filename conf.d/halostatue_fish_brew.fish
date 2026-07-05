@@ -1,4 +1,4 @@
-# @halostatue/fish-brew/conf.d/halostatue_fish_brew.fish:v3.2.1
+# @halostatue/fish-brew/conf.d/halostatue_fish_brew.fish:v4.0.0
 
 # Find Homebrew via a known prefix. If the `__homebrew_prefix` universal
 # variable is set, that will be set as the first test prefix.
