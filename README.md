@@ -1,7 +1,7 @@
 # halostatue/fish-brew
 
 [![Version](https://img.shields.io/github/tag/halostatue/fish-brew.svg?label=Version)][releases]
-[![MIT](https://img.shields.io/badge/licence-MIT-blue?style=for-the-badge "MIT")](https://github.com/halostatue/color/blob/main/LICENCE.md)
+[![MIT](https://img.shields.io/badge/licence-MIT-blue?style=for-the-badge "MIT")](https://github.com/halostatue/fish-brew/blob/main/LICENCE.md)
 
 Configuration and utility functions for [Homebrew][homebrew] in the
 [fish shell][shell].
