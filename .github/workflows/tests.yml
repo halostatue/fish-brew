@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
+        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920 # v2.20.0
         with:
           egress-policy: block
           allow-sudo: false
@@ -43,15 +43,15 @@ jobs:
             raw.githubusercontent.com:443
             registry.npmjs.org:443
 
-      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
-      - uses: fish-shop/install-fish-shell@b93bca74575a36e725e51679b1c18748784a6afc # v2.1.19
-      - uses: fish-shop/indent-check@6557200fc43e12e1eb2966da3e01cade9eb7e2ee # v2.2.110
-      - uses: fish-shop/syntax-check@f9a5452f25a01b3fb1212ed02c04b3617faca4ce # v2.2.108
-      - uses: fish-shop/install-plugin@51b7b99773c98be71c046ccaaa7d586d37fbb68a # v2.3.112
+      - uses: fish-shop/install-fish-shell@bb999171ad519ba785defbe016a27f2e810f11ea # v2.1.23
+      - uses: fish-shop/indent-check@b3cb6afa5529833425abdd61cdc6855836ee4519 # v2.2.114
+      - uses: fish-shop/syntax-check@58b0cafe65d19547c33c28e8ceda28b9598a2c2a # v2.2.112
+      - uses: fish-shop/install-plugin@8cd177a1a82c0e8a8971dffe9923e2f3b843e16d # v2.3.116
         with:
           plugin-manager: fisher
           plugins: IlanCosman/clownfish
-      - uses: fish-shop/run-fishtape-tests@99b60b58172fa166abdfc78077cb0fbaac099064 # v2.3.112
+      - uses: fish-shop/run-fishtape-tests@25b9389cd6e4d07c2bfc439c074475a15420d56a # v2.3.116
